@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto25
+
+  pre_build:
+    commands:
+      - echo "Java version:"
+      - java -version
+      - echo "Maven version:"
+      - ./mvnw -version
+
+  build:
+    commands:
+      - echo "Building application..."
+      - ./mvnw clean package -DskipTests
+
+artifacts:
+  files:
+    - target/*.jar
+cache:
+  paths:
+    - '/root/**/*'
