@@ -5,12 +5,12 @@ phases:
     runtime-versions:
       java: corretto25
 
-  pre_build:
-    commands:
-      - echo "Java version:"
-      - java -version
-      - echo "Maven version:"
-      - ./mvnw -version
+#  pre_build:
+#    commands:
+#      - echo "Java version:"
+#      - java -version
+#      - echo "Maven version:"
+#      - ./mvnw -version
 
   build:
     commands:
